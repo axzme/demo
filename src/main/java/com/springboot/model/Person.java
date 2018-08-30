@@ -1,21 +1,30 @@
 package com.springboot.model;
 
-import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.repository.CrudRepository;
 
-import javax.persistence.*;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
+@ApiModel("person")
 public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(value = "id",name = "id")
     private int id;
 
+    @ApiModelProperty(name = "name",value = "姓名")
     private String name;
 
+    @ApiModelProperty(name = "password",value = "密码")
     private String password;
 
+    @ApiModelProperty(name = "address",value = "地址")
     private String address;
 
     public int getId() {
