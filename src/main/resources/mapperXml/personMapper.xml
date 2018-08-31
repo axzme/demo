@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.springboot.mapper.PersonMapper" >
-    <select id="select"  resultType="com.springboot.model.Person">
+    <select id="select1"  resultType="com.springboot.model.Person">
         SELECT * FROM person LIMIT 1,1
     </select>
 </mapper>

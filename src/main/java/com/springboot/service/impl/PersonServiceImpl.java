@@ -12,8 +12,8 @@ import java.util.List;
 public class PersonServiceImpl implements PersonService {
    @Autowired private PersonMapper personMapper;
     @Override
-    public List<Person> query(int id) {
-        return personMapper.query(id);
+    public Person query(Integer id) {
+        return personMapper.selectByPrimaryKey(id);
     }
 
     @Override
@@ -22,13 +22,18 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public boolean exists(Person person) {
-        return personMapper.exists(person.getId());
+    public Object select() {
+        return personMapper.selectAll();
     }
 
     @Override
-    public Object select() {
-        return personMapper.select();
+    public Object delete(Person person) {
+        return personMapper.deleteByPrimaryKey(person);
+    }
+
+    @Override
+    public Object update(Person person) {
+        return personMapper.updateByPrimaryKeySelective(person);
     }
 
 }

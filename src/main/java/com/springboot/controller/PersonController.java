@@ -19,7 +19,7 @@ public class PersonController {
    @Autowired  PersonService personService;
    @RequestMapping(value = "/query",method = RequestMethod.GET)
    @ApiOperation(value = "/query",response = Person.class)
-    public List<Person> query(int id){
+    public Person queryById(Integer id){
         return personService.query(id);
     }
 
@@ -29,8 +29,18 @@ public class PersonController {
     }
 
     @RequestMapping(value = "select",method = RequestMethod.GET)
-    public Object select(){
+    public Object selectAll(){
         return personService.select();
+    }
+
+    @RequestMapping(value = "delete",method = RequestMethod.GET)
+    public Object deleteById(Person person){
+        return personService.delete(person);
+    }
+
+    @RequestMapping(value = "update",method = RequestMethod.POST)
+    public Object update(Person person){
+        return personService.update(person);
     }
 
 }

@@ -14,6 +14,12 @@ public class LoginServiceImpl implements LoginService {
     LoginMapper loginMapper;
     @Override
     public List<Person> selectUser(Person person) {
+       /* return loginMapper.selectAll();*/
         return loginMapper.select(person);
+    }
+
+    @Override
+    public List<Person> selectTemp() {
+        return loginMapper.selectTemp();
     }
 }

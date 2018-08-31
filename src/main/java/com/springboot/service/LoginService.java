@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface LoginService {
     List<Person> selectUser(Person person) ;
+
+    List<Person> selectTemp();
 }

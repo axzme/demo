@@ -5,10 +5,13 @@ import com.springboot.model.Person;
 import java.util.List;
 
 public interface PersonService {
-    List<Person> query(int id);
+    Person query(Integer id);
+
     int insert(Person person);
 
-    boolean exists(Person person);
-
     Object select();
+
+    Object delete(Person person);
+
+    Object update(Person person);
 }

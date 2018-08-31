@@ -18,7 +18,7 @@ public class ClassController{
     ClassService classService;
     @RequestMapping(value = "select",method = RequestMethod.GET)
     @ApiOperation(value = "/select",response = Classs.class)
-   public List<Classs> select(Classs classs){
-       return classService.select(classs);
+   public List<Classs> select(){
+       return classService.select();
    }
 }

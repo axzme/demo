@@ -13,7 +13,7 @@ public class ClassServiceImpl implements ClassService{
     @Autowired
     ClassMapper classMapper;
     @Override
-    public List<Classs> select(Classs classs) {
-        return classMapper.select();
+    public List<Classs> select() {
+        return classMapper.selectAll();
     }
 }

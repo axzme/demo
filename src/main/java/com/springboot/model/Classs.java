@@ -2,16 +2,16 @@ package com.springboot.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-
 import javax.persistence.*;
 
-@Entity
+
 @ApiModel(value = "class")
+@Table(name = "class")
 public class Classs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ApiModelProperty(name = "id",value = "id")
-    private int id;
+    private Integer id;
 
     @ApiModelProperty(name = "name",value = "姓名")
     private String name;
@@ -20,11 +20,11 @@ public class Classs {
     @Column(name = "person_id")
     private int personId;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
