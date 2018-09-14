@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.annotation.WebFilter;
 import java.util.List;
 
 @RestController
@@ -27,6 +28,7 @@ public class PersonController {
     public int insert(Person person){
         return personService.insert(person);
     }
+
 
     @RequestMapping(value = "select",method = RequestMethod.GET)
     public Object selectAll(){

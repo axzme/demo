@@ -6,11 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.Part;
 import java.io.*;
-import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -30,7 +27,7 @@ public class FileUploadServieImpl implements FileUploadService {
         }
     }
 
-    /*获取多个文件*/
+    /*根据request中name值获取多个文件*/
     private void getMultiFile(HttpServletRequest request){
         CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver();
         if (commonsMultipartResolver.isMultipart(request)){

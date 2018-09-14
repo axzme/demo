@@ -2,6 +2,8 @@ package com.springboot.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.apache.ibatis.annotations.Select;
+
 import javax.persistence.*;
 
 
@@ -18,7 +20,7 @@ public class Classs {
 
     @ApiModelProperty(name = "personId",value = "personId")
     @Column(name = "person_id")
-    private int personId;
+    private Integer personId;
 
     public Integer getId() {
         return id;
@@ -36,11 +38,11 @@ public class Classs {
         this.name = name;
     }
 
-    public int getPersonId() {
+    public Integer getPersonId() {
         return personId;
     }
 
-    public void setPersonId(int personId) {
+    public void setPersonId(Integer personId) {
         this.personId = personId;
     }
 }

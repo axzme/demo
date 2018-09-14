@@ -10,8 +10,10 @@ import java.util.List;
 
 @Service
 public class ClassServiceImpl implements ClassService{
+
     @Autowired
     ClassMapper classMapper;
+
     @Override
     public List<Classs> select() {
         return classMapper.selectAll();

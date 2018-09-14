@@ -12,4 +12,12 @@
     <servlet-name>mvc_interceptor</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>-->
+  <filter>
+    <filter-name>helloFilter</filter-name>
+    <filter-class>com.springboot.filter.HelloFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>helloFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

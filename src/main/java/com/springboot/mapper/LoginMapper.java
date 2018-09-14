@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 @Mapper
 public interface LoginMapper extends WyBaseMapper<Person> {
-    /*@Select("select * from person")*/
+   /* @Select("select * from person")*/
     List<Person> selectTemp();
 }

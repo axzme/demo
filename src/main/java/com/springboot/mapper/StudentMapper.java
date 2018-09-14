@@ -1,11 +1,11 @@
 package com.springboot.mapper;
 
-import com.springboot.model.Classs;
+import com.springboot.model.Student;
 import com.springboot.util.WyBaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-@Mapper
 @Repository
-public interface ClassMapper extends WyBaseMapper<Classs>{
+@Mapper
+public interface StudentMapper extends WyBaseMapper<Student> {
 }
