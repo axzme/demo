@@ -21,7 +21,7 @@ public class FileUploadServieImpl implements FileUploadService {
         try {
             byte[] fileBytes = file.getBytes();
             return uploadFile(fileBytes, filePath, fileName);
-        } catch (IOException e) {
+        } catch (IOException e){
             e.printStackTrace();
             return BaseResultBean.baseResultBean.fail(CodeEnum.FAIL.getCode(), "fail");
         }
